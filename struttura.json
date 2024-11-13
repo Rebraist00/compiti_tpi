@@ -1,0 +1,84 @@
+{
+    "Centrale": {
+        "Piano Terra": [
+            {
+                "classe": "1A"
+            },
+            {
+                "classe": "1B"
+            },
+            {
+                "classe": "Biblioteca"
+            },
+            {
+                "classe": "Palestra"
+            }
+        ],
+        "Primo Piano": [
+            {
+                "classe": "2A"
+            },
+            {
+                "classe": "2B"
+            },
+            {
+                "classe": "2C"
+            },
+            {
+                "classe": "Laboratorio di Informatica"
+            }
+        ],
+        "Secondo Piano": [
+            {
+                "classe": "3A"
+            },
+            {
+                "classe": "3B"
+            },
+            {
+                "classe": "3C"
+            },
+            {
+                "classe": "Laboratorio di Chimica"
+            }
+        ]
+    },
+    "Succursale": {
+        "Piano Terra": [
+            {
+                "classe": "3Q"
+            },
+            {
+                "classe": "bagno"
+            },
+            {
+                "classe": "5O"
+            },
+            {
+                "classe": "laboratorio di telecomunicazioni "
+            }
+        ],
+        "Primo Piano": [
+            {
+                "classe": "2D"
+            },
+            {
+                "classe": "4Q"
+            },
+            {
+                "classe": "Laboratorio di informatica"
+            }
+        ],
+        "Secondo Piano": [
+            {
+                "classe": "3D"
+            },
+            {
+                "classe": "3E"
+            },
+            {
+                "classe": "Laboratorio di informatica 2"
+            }
+        ]
+    }
+}
