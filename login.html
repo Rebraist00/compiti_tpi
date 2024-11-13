@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina di Login</title>
+    <style>
+        /* Stili base per centrare il modulo nella pagina */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Contenitore del modulo di login */
+        .login-container {
+            background-color: #7e7e7e;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="login-container">
+        <h2>Login</h2>
+        <form onsubmit="processaLogin(event)">
+            <label for="username">Nome utente</label>
+            <input type="text" id="username" name="username" placeholder="Inserisci il tuo nome utente" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Inserisci la tua password" required>
+
+            <button type="submit">Accedi</button>
+        </form>
+
+        <div class="forgot-password">
+            <a href="#">Hai dimenticato la password?</a>
+        </div>
+    </div>
+
+    <script>
+        // Array di utenti con nome e password
+        var utenti = [
+            {
+                "nome": "Alessandro",
+                "password": "101207"
+            },
+            {
+                "nome": "camino",
+                "password": "camn"
+            }
+        ];
+
+        // Funzione per elaborare il login
+        function processaLogin(event) {
+            event.preventDefault();  // Evita l'invio del modulo
+
+            // Ottieni i valori inseriti dall'utente
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            // Variabile per tenere traccia se l'utente è stato trovato
+            var utenteTrovato = false;
+
+            // Cerca l'utente nell'array
+            for (var i = 0; i < utenti.length; i++) {
+                if (utenti[i].nome === username && utenti[i].password === password) {
+                    utenteTrovato = true;
+                    break;  // Esci dal ciclo non appena trovi il match
+                }
+            }
+
+            // Mostra un messaggio in base al risultato
+            if (utenteTrovato) {
+                alert("Login effettuato con successo!");
+                window.location.href = "index.html";
+            } else {
+                alert("Nome utente o password errati!");
+            }
+        }
+    </script>
+
+</body>
+</html>
